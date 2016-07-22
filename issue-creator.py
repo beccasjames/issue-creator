@@ -9,25 +9,23 @@ import time
 import github3
 
 gh = github3.login(token="PERSONAL-ACCESS-TOKEN-TODO")
-repo = gh.repository("ORG-NAME-TODO"),"REPO-NAME-TODO")
+repo = gh.repository("ORG-NAME-TODO","REPO-NAME-TODO")
 
 ## authenticates your identity with github using a generated personal access token
 ##allows you to access a given repo, where first item in () == org name and second is the repo where you want to create issue
 
-with open('LOCATION/FILENAME.CSV-TODO') as f:
+with open('LOCATION/FILENAME-TODO.CSV') as f:
 ## include the location/name of your csv file within open()
 ## ensure that your csv includes only the data you want to pull in and create issues for (i.e. no headers!)
 ## Becca should include a programmatic option to remove unnecessary rows
     reader = csv.reader(f)
     for row in reader:
-        print ('Creating an issue for ' + row[0])
+        print ('Creating an issue titled: ' + row[1])
 ## this tells you what your program is doing in your terminal
-        labels=[]
-        labels.append(row[2])
-## this creates a list called labels, getting around the problem that labels need to be arrays of strings...
-## this still can't handle multiple labels though :/
-        issue = repo.create_issue(title=row[0],body=row[1],labels=labels)
-## creates an issue with keyword arguments that map to the title, body, and labels of the issue
-## there is no support here for assignees or milestones yet
-        time.sleep(1)
+        labels=row[3].split(",")
+## this allows you to use a comma-separated list surrounded by quotes to create a list of labels
+        issue = repo.create_issue(title=row[1],body=row[2],labels=labels,assignee=row[4],milestone=(row[5] if row[5] else None))
+## creates an issue with keyword arguments that map to the title, body, labels, assignee, and milestone of the issue
+## there is no support yet for multiple assignees (see github3.py bug #626)
+        time.sleep(0.25)
 ## throttles the program so github continues to think you're awesome
