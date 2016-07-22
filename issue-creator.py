@@ -26,6 +26,7 @@ with open('LOCATION/FILENAME-TODO.CSV') as f:
 ## this allows you to use a comma-separated list surrounded by quotes to create a list of labels
         issue = repo.create_issue(title=row[1],body=row[2],labels=labels,assignee=row[4],milestone=(row[5] if row[5] else None))
 ## creates an issue with keyword arguments that map to the title, body, labels, assignee, and milestone of the issue
+## milestones need to be represented by an integer, not the name of the milestone
 ## there is no support yet for multiple assignees (see github3.py bug #626)
         time.sleep(0.25)
 ## throttles the program so github continues to think you're awesome
