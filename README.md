@@ -15,7 +15,4 @@ Python script requires pointing to a .csv. This .csv file should have extraneous
 
 ## Notes
 
-1) There is not currently support for adding assignees and milestones to your issues.
-
-2) You can only add one label at a time.
-
+1) There is not support for adding multiple assignees yet :(
