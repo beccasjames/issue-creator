@@ -1,8 +1,8 @@
 ## `source github/bin/activate` will open github virtualenv
 ## using external library called github3.py
 ## run `pip install github3.py` to install github library onto virtualenv
-## run `python Desktop/github_issues.py` to point to file location
-## begin with `clear &&` to clear the output of the previous command and run command cleanly
+## run `python Desktop/issue-creator.py` to point to this file's location and update file name if you changed it!
+## tip: begin lines with `clear &&` to clear the output of the previous command and run command cleanly
 
 import csv
 import sys
