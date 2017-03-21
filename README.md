@@ -15,4 +15,4 @@ Python script requires pointing to a .csv. This .csv file should have extraneous
 
 ## Notes
 
-1) There is not support for adding multiple assignees yet :(
+1) This script relies on an external library called [github3.py](https://github3py.readthedocs.io/en/master/). There is no support for adding multiple assignees yet :(
