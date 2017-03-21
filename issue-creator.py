@@ -1,6 +1,6 @@
 ## In terminal use `source github/bin/activate` to open github virtualenv
 ## Run `pip install github3.py` to install github3.py library in virtualenv
-## Run `python LOCATION/FILENAME-TODO.py` to point to this file's location
+## Run `python "LOCATION/FILENAME-TODO.py"` to point to this file's location
 
 import csv
 import sys
