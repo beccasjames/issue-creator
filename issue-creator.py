@@ -9,7 +9,6 @@ import github3
 
 gh = github3.login(token="PERSONAL-ACCESS-TOKEN-TODO")
 repo = gh.repository("ORG-NAME-TODO","REPO-NAME-TODO")
-
 ## authenticates your identity with github using a generated personal access token
 ##allows you to access a given repo, where first item in () == org name and second is the repo where you want to create issue
 
