@@ -1,6 +1,7 @@
-## In terminal use `source github/bin/activate` to open github virtualenv
+## Pointing to the parent directory of this file, in your terminal run `virtualenv issue-creator`
+## Activate the virtualenv by running `source issue-creator/bin/activate`
 ## Run `pip install github3.py` to install github3.py library in virtualenv
-## Run `python "LOCATION/FILENAME-TODO.py"` to point to this file's location
+## Run `python issue-creator.py` to execute this script
 
 import csv
 import sys
