@@ -1,5 +1,5 @@
 # issue-creator
-A bulk ticket creator for GitHub issues! Create a bunch of issues all at one with one Python script and one .csv file.
+A bulk ticket creator for GitHub issues! Create a bunch of issues all at once with one Python script and one .csv file.
 
 Python script requires pointing to a .csv. This .csv file should have extraneous header rows removed (see `sample-issues.csv`)
 
